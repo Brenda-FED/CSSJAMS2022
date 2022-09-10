@@ -1,0 +1,310 @@
+
+.ul_Ol_container{
+  padding: 5px;
+  margin: .5%;
+  display:flex;
+  display: list-item;
+  flex-flow: row wrap;
+  padding: 10px 4px;
+  background-color: #dcdcdc;
+  border-radius: 15px;
+  position: relative;
+  height: 700px;
+  line-height: 0.9; 
+  width: 100%;
+  box-shadow: 0 20px 40px -14px #cc8400;
+}
+  
+  .unorder{
+    float: none; 
+    clear: both;
+    width: 75%; 
+    margin: .5% auto;
+    padding-bottom: 1%;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px -14px #cc8400;
+    background: whitesmoke
+  
+    
+  }
+
+  .unorder ul {
+    margin: 0px;
+    padding: 0px;
+    font-size: 30px;
+    font-weight: 500;
+    text-align:center;
+  }
+  
+  .unorder li{
+    float: none; 
+    width: 100%;
+  }
+  
+  .unorder li a{
+    display: block; 
+    width: 100%; 
+    padding: 20px; 
+    border-left: 5px solid; 
+    position: relative; 
+    z-index: 2;
+    text-decoration: none;
+    box-sizing: border-box;  
+    -moz-box-sizing: border-box;  
+    -webkit-box-sizing: border-box; 
+  }
+      
+  .unorder li a:hover{ border-bottom: 0px; color: #fff;}
+  .unorder li:first-child a{ border-left: 10px solid red; }
+  .unorder li:nth-child(2) a{ border-left: 10px solid blue; }
+  .unorder li:nth-child(3) a{ border-left: 10px solid green; }
+  .unorder li:nth-child(4) a{ border-left: 10px solid yellow; }
+  .unorder li:last-child a{ border-left: 10px solid #A95C68; }
+  
+  .unorder li a:after { 
+    content: " ";
+    height: 100%; 
+    left: 0; 
+    top: 0; 
+    width: 0px;  
+    position: absolute; 
+    transition: all 0.3s ease 0s; 
+    -webkit-transition: all 0.3s ease 0s; 
+    z-index: -1;
+  }
+  
+  .unorder li a:hover:after{ width: 100%; }
+  .unorder li:first-child a:after{ background: red; }
+  .unorder li:nth-child(2) a:after{ background: blue; }
+  .unorder li:nth-child(3) a:after{ background: green; }
+  .unorder li:nth-child(4) a:after{ background: yellow; }
+  .unorder li:last-child a:after{ background: #A95C68; }
+  
+  
+  .ordered-ol {
+    list-style-type: none;
+    counter-reset: ordered-li;
+  }
+  .ordered-li {
+    font-size: 2rem;
+  }
+  
+  .ordered-li:before {
+    counter-increment: ordered-li;
+    content: counter(ordered-li, decimal-leading-zero);
+    
+    margin-right: 0.25em;
+  }
+ 
+  .ordered-1 {
+    --b:4px;   /* border length*/
+    --c:20px;  /* the cube perspective */
+    
+    
+    --g:calc(var(--c)*0.707); /* 0.707 = cos(45deg) = sin(45deg) */
+    color:rgb(14, 14, 218);
+    transition: 0.5s;
+    border: solid transparent;
+    border-width:var(--b) var(--b) calc(var(--c) + var(--b)) calc(var(--c) + var(--b));
+    background:
+      linear-gradient(-45deg,transparent var(--g),rgba(104, 73, 205, 0.6) 0) left  /var(--c) 100%,
+      linear-gradient(135deg,transparent var(--g),rgba(98, 113, 231, 0.3) 0) bottom /100% var(--c),
+      conic-gradient(from -90deg at top var(--b)   right var(--b),currentColor 270deg,transparent 0),
+      conic-gradient(from  90deg at bottom calc(var(--c) + var(--b)) left calc(var(--c) + var(--b)),currentColor 270deg,transparent 0) ;
+    background-repeat:no-repeat;
+    background-origin:border-box;
+    transform:translate(calc(var(--c)/-1),calc(var(--c)/1));
+    clip-path: 
+      polygon(var(--c) 0%, var(--c) 0%, 
+      100% 0%, 
+      100% calc(100% - var(--c)),100% calc(100% - var(--c)),
+      var(--c) calc(100% - var(--c)),
+      var(--c) calc(100% - var(--c)));
+  }
+  .ordered-1:hover {
+    background-color:blue;
+    color:white;
+    transform:translate(0,0);
+    clip-path: 
+      polygon(0% var(--c), var(--c) 0%, 
+      100% 0%, 
+      100% calc(100% - var(--c)), calc(100% - var(--c)) 100%, 
+      0% 100%,0% 100%);
+  }
+  
+  .ordered-2 {
+    --b:4px;   /* border length*/
+    --c:20px;  /* the cube perspective */
+    
+    
+    --g:calc(var(--c)*0.707); /* 0.707 = cos(45deg) = sin(45deg) */
+    color: #A95C68; 
+    transition: 0.5s;
+    border: solid transparent;
+    border-width:var(--b) var(--b) calc(var(--c) + var(--b)) calc(var(--c) + var(--b));
+    background:
+      linear-gradient(-45deg,transparent var(--g),rgba(104, 73, 205, 0.6) 0) left  /var(--c) 100%,
+      linear-gradient(135deg,transparent var(--g),rgba(98, 113, 231, 0.3) 0) bottom /100% var(--c),
+      conic-gradient(from -90deg at top var(--b)   right var(--b),currentColor 270deg,transparent 0),
+      conic-gradient(from  90deg at bottom calc(var(--c) + var(--b)) left calc(var(--c) + var(--b)),currentColor 270deg,transparent 0) ;
+    background-repeat:no-repeat;
+    background-origin:border-box;
+    transform:translate(calc(var(--c)/-1),calc(var(--c)/1));
+    clip-path: 
+      polygon(var(--c) 0%, var(--c) 0%, 
+      100% 0%, 
+      100% calc(100% - var(--c)),100% calc(100% - var(--c)),
+      var(--c) calc(100% - var(--c)),
+      var(--c) calc(100% - var(--c)));
+  }
+  .ordered-2:hover {
+    background-color: #A95C68; ;
+    color:white;
+    transform:translate(0,0);
+    clip-path: 
+      polygon(0% var(--c), var(--c) 0%, 
+      100% 0%, 
+      100% calc(100% - var(--c)), calc(100% - var(--c)) 100%, 
+      0% 100%,0% 100%);
+  }
+  .ordered-2 {
+    --b:4px;   /* border length*/
+    --c:20px;  /* the cube perspective */
+    
+    
+    --g:calc(var(--c)*0.707); /* 0.707 = cos(45deg) = sin(45deg) */
+    color: #A95C68; 
+    transition: 0.5s;
+    border: solid transparent;
+    border-width:var(--b) var(--b) calc(var(--c) + var(--b)) calc(var(--c) + var(--b));
+    background:
+      linear-gradient(-45deg,transparent var(--g),rgba(168, 40, 113, 0.6) 0) left  /var(--c) 100%,
+      linear-gradient(135deg,transparent var(--g),rgba(196, 5, 81, 0.3) 0) bottom /100% var(--c),
+      conic-gradient(from -90deg at top var(--b)   right var(--b),currentColor 270deg,transparent 0),
+      conic-gradient(from  90deg at bottom calc(var(--c) + var(--b)) left calc(var(--c) + var(--b)),currentColor 270deg,transparent 0) ;
+    background-repeat:no-repeat;
+    background-origin:border-box;
+    transform:translate(calc(var(--c)/-1),calc(var(--c)/1));
+    clip-path: 
+      polygon(var(--c) 0%, var(--c) 0%, 
+      100% 0%, 
+      100% calc(100% - var(--c)),100% calc(100% - var(--c)),
+      var(--c) calc(100% - var(--c)),
+      var(--c) calc(100% - var(--c)));
+  }
+  .ordered-2:hover {
+    background-color: #A95C68; ;
+    color:white;
+    transform:translate(0,0);
+    clip-path: 
+      polygon(0% var(--c), var(--c) 0%, 
+      100% 0%, 
+      100% calc(100% - var(--c)), calc(100% - var(--c)) 100%, 
+      0% 100%,0% 100%);
+  }
+  .ordered-3 {
+    --b:4px;   /* border length*/
+    --c:20px;  /* the cube perspective */
+    
+    
+    --g:calc(var(--c)*0.707); /* 0.707 = cos(45deg) = sin(45deg) */
+    color: orange; 
+    transition: 0.5s;
+    border: solid transparent;
+    border-width:var(--b) var(--b) calc(var(--c) + var(--b)) calc(var(--c) + var(--b));
+    background:
+      linear-gradient(-45deg,transparent var(--g),rgba(242, 179, 54, 0.6) 0) left  /var(--c) 100%,
+      linear-gradient(135deg,transparent var(--g),rgba(173, 82, 3, 0.3) 0) bottom /100% var(--c),
+      conic-gradient(from -90deg at top var(--b)   right var(--b),currentColor 270deg,transparent 0),
+      conic-gradient(from  90deg at bottom calc(var(--c) + var(--b)) left calc(var(--c) + var(--b)),currentColor 270deg,transparent 0) ;
+    background-repeat:no-repeat;
+    background-origin:border-box;
+    transform:translate(calc(var(--c)/-1),calc(var(--c)/1));
+    clip-path: 
+      polygon(var(--c) 0%, var(--c) 0%, 
+      100% 0%, 
+      100% calc(100% - var(--c)),100% calc(100% - var(--c)),
+      var(--c) calc(100% - var(--c)),
+      var(--c) calc(100% - var(--c)));
+  }
+  .ordered-3:hover {
+    background-color: orange; ;
+    color:white;
+    transform:translate(0,0);
+    clip-path: 
+      polygon(0% var(--c), var(--c) 0%, 
+      100% 0%, 
+      100% calc(100% - var(--c)), calc(100% - var(--c)) 100%, 
+      0% 100%,0% 100%);
+  }
+  .ordered-4 {
+    --b:4px;   /* border length*/
+    --c:20px;  /* the cube perspective */
+    
+    
+    --g:calc(var(--c)*0.707); /* 0.707 = cos(45deg) = sin(45deg) */
+    color:  #F28500; 
+    transition: 0.5s;
+    border: solid transparent;
+    border-width:var(--b) var(--b) calc(var(--c) + var(--b)) calc(var(--c) + var(--b));
+    background:
+      linear-gradient(-45deg,transparent var(--g),rgba(243, 165, 40, 0.6) 0) left  /var(--c) 100%,
+      linear-gradient(135deg,transparent var(--g),rgba(235, 127, 26, 0.3) 0) bottom /100% var(--c),
+      conic-gradient(from -90deg at top var(--b)   right var(--b),currentColor 270deg,transparent 0),
+      conic-gradient(from  90deg at bottom calc(var(--c) + var(--b)) left calc(var(--c) + var(--b)),currentColor 270deg,transparent 0) ;
+    background-repeat:no-repeat;
+    background-origin:border-box;
+    transform:translate(calc(var(--c)/-1),calc(var(--c)/1));
+    clip-path: 
+      polygon(var(--c) 0%, var(--c) 0%, 
+      100% 0%, 
+      100% calc(100% - var(--c)),100% calc(100% - var(--c)),
+      var(--c) calc(100% - var(--c)),
+      var(--c) calc(100% - var(--c)));
+  }
+  .ordered-4:hover {
+    background-color:  #F28500 ;
+    color:white;
+    transform:translate(0,0);
+    clip-path: 
+      polygon(0% var(--c), var(--c) 0%, 
+      100% 0%, 
+      100% calc(100% - var(--c)), calc(100% - var(--c)) 100%, 
+      0% 100%,0% 100%);
+  }
+  .ordered-5 {
+    --b:4px;   /* border length*/
+    --c:20px;  /* the cube perspective */
+    
+    
+    --g:calc(var(--c)*0.707); /* 0.707 = cos(45deg) = sin(45deg) */
+    color: #bfff00; 
+    transition: 0.5s;
+    border: solid transparent;
+    border-width:var(--b) var(--b) calc(var(--c) + var(--b)) calc(var(--c) + var(--b));
+    background:
+      linear-gradient(-45deg,transparent var(--g),rgba(112, 240, 123, 0.6) 0) left  /var(--c) 100%,
+      linear-gradient(135deg,transparent var(--g),rgba(108, 239, 104, 0.3) 0) bottom /100% var(--c),
+      conic-gradient(from -90deg at top var(--b)   right var(--b),currentColor 270deg,transparent 0),
+      conic-gradient(from  90deg at bottom calc(var(--c) + var(--b)) left calc(var(--c) + var(--b)),currentColor 270deg,transparent 0) ;
+    background-repeat:no-repeat;
+    background-origin:border-box;
+    transform:translate(calc(var(--c)/-1),calc(var(--c)/1));
+    clip-path: 
+      polygon(var(--c) 0%, var(--c) 0%, 
+      100% 0%, 
+      100% calc(100% - var(--c)),100% calc(100% - var(--c)),
+      var(--c) calc(100% - var(--c)),
+      var(--c) calc(100% - var(--c)));
+  }
+  .ordered-5:hover {
+    background-color: #bfff00;
+    color:white;
+    transform:translate(0,0);
+    clip-path: 
+      polygon(0% var(--c), var(--c) 0%, 
+      100% 0%, 
+      100% calc(100% - var(--c)), calc(100% - var(--c)) 100%, 
+      0% 100%,0% 100%);
+  }
+  

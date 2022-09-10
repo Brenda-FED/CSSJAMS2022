@@ -1,0 +1,55 @@
+
+/* Start of Styling Navigation Links */
+.navbar-container{
+  position: fixed;
+  height: 50px;
+  text-size-adjust: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background: #003e7e;
+  box-shadow: 0 0 5px 5px #cc8800;
+  z-index: 100
+}
+.navbar-links{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.05em;
+  align-items: center;
+  color: whitesmoke;
+  font-size: 30px;
+  list-style: none;
+}
+
+.navbar-links li {
+  margin:  0.5rem;
+  padding: 0em;
+  cursor: pointer;
+}
+
+.navbar-links li:hover {
+  color:whitesmoke
+}
+
+.navlinks{
+    background:
+      linear-gradient(currentColor 0 0) 0 0,
+      linear-gradient(currentColor 0 0) 0 0,
+      linear-gradient(currentColor 0 0) 100% 100%,
+      linear-gradient(currentColor 0 0) 100% 100%;
+    background-size: var(--d, 0) 3px, 3px var(--d, 0);
+    background-repeat: no-repeat;
+    transition: 0.5s;
+  }
+  .navlinks:hover {
+    --d: 100%;
+  }
+
+   /* End of Styling Navigation Links */
+  
